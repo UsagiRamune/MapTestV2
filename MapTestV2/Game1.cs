@@ -33,8 +33,8 @@ namespace MapTestV2
         private readonly List<Collisions> _entities = new List<Collisions>();
         public readonly CollisionComponent _collisionComponent;
         Texture2D player, black;
-        private MouseState currentMouseState;
-        private MouseState previousMouseState;
+        //private MouseState currentMouseState;
+        //private MouseState previousMouseState;
 
         public Game1()
         {
@@ -110,7 +110,7 @@ namespace MapTestV2
             //else
             //{
             //    layer4.IsVisible = false; // Hide layer when mouse leaves
-            }
+            //}
             _collisionComponent.Update(gameTime);
             // TODO: Add your update logic here
             _tiledMapRenderer.Update(gameTime);
@@ -131,7 +131,6 @@ namespace MapTestV2
             _tiledMapRenderer.Draw(3, transformMatrix);
             _tiledMapRenderer.Draw(4, transformMatrix);
             _tiledMapRenderer.Draw(5, transformMatrix);
-            if (layer4)
             _tiledMapRenderer.Draw(6, transformMatrix);
 
             _spriteBatch.Begin(transformMatrix: transformMatrix, samplerState: SamplerState.PointClamp, rasterizerState: RasterizerState.CullNone);
