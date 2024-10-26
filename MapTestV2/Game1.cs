@@ -24,7 +24,7 @@ namespace MapTestV2
         public const int MapWidth = 21600;
         public const int MapHeight = 21600;
         TiledMap _tiledMap;
-        private TiledMapTileLayer layer4;
+        //private TiledMapTileLayer layer4;
         public static int pic;
         public static OrthographicCamera _camera;
         public static Vector2 camerashift;
