@@ -54,8 +54,12 @@ namespace MapTestV2
             var transformMatrix = viewportadapter.GetScaleMatrix();
             _camera = new OrthographicCamera(viewportadapter);
 
-            playerPos = new Vector2(1728, 7920);
-            //playerPos = new Vector2(2808, 2808);
+            playerPos = new Vector2(1728, 7920); //Cutscene
+            //playerPos = new Vector2(2808, 2808); //Forest
+            //playerPos = new Vector2(7272, 936 ); //Bedroom
+            //playerPos = new Vector2(7272, 2016 ); //Bathroom
+            //playerPos = new Vector2(7272, 864 ); //Hall
+            //playerPos = new Vector2(8208, 1872 ); //Main
             cameraPos = new Vector2(playerPos.X, playerPos.Y);
             base.Initialize();
         }
