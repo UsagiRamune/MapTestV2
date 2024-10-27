@@ -94,7 +94,7 @@
 /processor:TiledMapProcessor
 /build:ShamanMap.tmx
 
-#begin Spirit House 3.1 - Environment.png
+#begin Spirit House 3.2 - Environment.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -104,7 +104,12 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Spirit House 3.1 - Environment.png
+/build:Spirit House 3.2 - Environment.png
+
+#begin SpiritHouseTileset.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:SpiritHouseTileset.tsx
 
 #begin TileSet0.1.png
 /importer:TextureImporter

@@ -10,7 +10,7 @@ namespace MapTestV2
     internal class PlayerCollision : Collisions
     {
         private readonly Game1 _game;
-        public int Velocity = 20;
+        public int Velocity = 5;
         Vector2 move;
         public IShapeF Bounds { get; }
         private KeyboardState _currentKey;

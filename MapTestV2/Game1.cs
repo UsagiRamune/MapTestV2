@@ -9,7 +9,6 @@ using MonoGame.Extended.Tiled;
 using MonoGame.Extended.Tiled.Renderers;
 using MonoGame.Extended.Collisions;
 using MonoGame.Extended.ViewportAdapters;
-using SharpDX.Direct2D1;
 using Microsoft.VisualBasic;
 
 namespace MapTestV2
@@ -55,7 +54,8 @@ namespace MapTestV2
             var transformMatrix = viewportadapter.GetScaleMatrix();
             _camera = new OrthographicCamera(viewportadapter);
 
-            playerPos = new Vector2(7272, 2016);
+            playerPos = new Vector2(1728, 7920);
+            //playerPos = new Vector2(2808, 2808);
             cameraPos = new Vector2(playerPos.X, playerPos.Y);
             base.Initialize();
         }
@@ -70,22 +70,20 @@ namespace MapTestV2
             _spriteBatch = new Microsoft.Xna.Framework.Graphics.SpriteBatch(GraphicsDevice);
             SamplerState samplerState = SamplerState.PointClamp;
             _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
-            layer4 = _tiledMap.GetLayer<TiledMapTileLayer>("Interaction Object");
-            layer4.IsVisible = false;
 
-            //foreach (TiledMapObjectLayer layer in _tiledMap.ObjectLayers)
-            //{
-            //    if (layer.Name == "ObjectHitbox")
-            //    {
-            //        rpgTiledObj = layer;
-            //    }
-            //}
+            foreach (TiledMapObjectLayer layer in _tiledMap.ObjectLayers)
+            {
+                if (layer.Name == "ObjectHitbox")
+                {
+                    rpgTiledObj = layer;
+                }
+            }
             //Create entities from map
-            //foreach (TiledMapObject obj in rpgTiledObj.Objects)
-            //{
-            //    Point2 position = new Point2(obj.Position.X, obj.Position.Y);
-            //    _entities.Add(new RPGCollision(this, new RectangleF(position, obj.Size)));
-            //}
+            foreach (TiledMapObject obj in rpgTiledObj.Objects)
+            {
+                Point2 position = new Point2(obj.Position.X, obj.Position.Y);
+                _entities.Add(new RPGCollision(this, new RectangleF(position, obj.Size)));
+            }
             _entities.Add(new PlayerCollision(this, new RectangleF(new Vector2(playerPos.X - 18 + 4, playerPos.Y + 18), new Size2(28, 18))));
             foreach (Collisions entity in _entities)
             {
@@ -102,15 +100,6 @@ namespace MapTestV2
             {
                 entity.Update(gameTime);
             }
-            //Vector2 mousePos = Vector2.Transform(new Vector2(currentMouseState.X, currentMouseState.Y),Matrix.Invert(_camera.GetViewMatrix()));
-            //if (rpgTiledObj.)
-            //{
-            //    layer4.IsVisible = true; // Show layer when mouse hovers
-            //}
-            //else
-            //{
-            //    layer4.IsVisible = false; // Hide layer when mouse leaves
-            //}
             _collisionComponent.Update(gameTime);
             // TODO: Add your update logic here
             _tiledMapRenderer.Update(gameTime);
@@ -124,6 +113,7 @@ namespace MapTestV2
             RasterizerState rasterizerState = RasterizerState.CullNone;
             var transformMatrix = _camera.GetViewMatrix();
             GraphicsDevice.RasterizerState = new RasterizerState { ScissorTestEnable = true };
+
             // TODO: Add your drawing code here
             _tiledMapRenderer.Draw(0, transformMatrix);
             _tiledMapRenderer.Draw(1, transformMatrix);
@@ -131,7 +121,6 @@ namespace MapTestV2
             _tiledMapRenderer.Draw(3, transformMatrix);
             _tiledMapRenderer.Draw(4, transformMatrix);
             _tiledMapRenderer.Draw(5, transformMatrix);
-            _tiledMapRenderer.Draw(6, transformMatrix);
 
             _spriteBatch.Begin(transformMatrix: transformMatrix, samplerState: SamplerState.PointClamp, rasterizerState: RasterizerState.CullNone);
             _spriteBatch.Draw(player, new Vector2(playerPos.X - 36, playerPos.Y - 72), new Rectangle(pic * 36, 0, 36, 72), Color.White, 0, Vector2.Zero, new Vector2(2, 2), 0, 0.2f);
@@ -143,10 +132,16 @@ namespace MapTestV2
             _spriteBatch.Draw(black, playerPos, Color.White);
             Console.WriteLine(camerashift);
             _spriteBatch.End();
-            
+
+            _tiledMapRenderer.Draw(6, transformMatrix);
             _tiledMapRenderer.Draw(7, transformMatrix);
             _tiledMapRenderer.Draw(8, transformMatrix);
             _tiledMapRenderer.Draw(9, transformMatrix);
+            _tiledMapRenderer.Draw(10, transformMatrix);
+            _tiledMapRenderer.Draw(11, transformMatrix);
+            _tiledMapRenderer.Draw(12, transformMatrix);
+            _tiledMapRenderer.Draw(13, transformMatrix);
+            _tiledMapRenderer.Draw(14, transformMatrix);
 
             base.Draw(gameTime);
         }
