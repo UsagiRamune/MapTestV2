@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/LEGION/Downloads/Cs to/Shaman/2.12/ShamanTheMantraWorld/ShamanTheMantraWorld/Content/New folder/ForestTileset - Copy.tsx</SourceFile>
+  <SourceTime>2024-10-26T16:47:17.5622484+07:00</SourceTime>
+  <DestFile>C:/Users/LEGION/Documents/VS 2022/Monogame/MapTestV2/MapTestV2/Content/bin/Windows/Content/../../../../../../Downloads/Cs to/Shaman/2.12/ShamanTheMantraWorld/ShamanTheMantraWorld/Content/New folder/ForestTileset - Copy_0.xnb</DestFile>
+  <DestTime>2024-10-28T15:16:17.0168776+07:00</DestTime>
+  <Importer>TiledMapTilesetImporter</Importer>
+  <ImporterTime>2023-09-15T00:15:36+07:00</ImporterTime>
+  <Processor>TiledMapTilesetProcessor</Processor>
+  <ProcessorTime>2023-09-15T00:15:36+07:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset>
+    <string>C:/Users/LEGION/Documents/VS 2022/Monogame/MapTestV2/MapTestV2/Content/bin/Windows/Content/../../../../../../Downloads/Cs to/Shaman/2.12/ShamanTheMantraWorld/ShamanTheMantraWorld/Content/New folder/Forest 3.1 - Environment_0.xnb</string>
+  </BuildAsset>
+  <BuildOutput />
+</PipelineBuildEvent>

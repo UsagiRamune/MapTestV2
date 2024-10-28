@@ -54,12 +54,20 @@ namespace MapTestV2
             var transformMatrix = viewportadapter.GetScaleMatrix();
             _camera = new OrthographicCamera(viewportadapter);
 
-            playerPos = new Vector2(1728, 7920); //Cutscene
-            //playerPos = new Vector2(2808, 2808); //Forest
-            //playerPos = new Vector2(7272, 936 ); //Bedroom
-            //playerPos = new Vector2(7272, 2016 ); //Bathroom
-            //playerPos = new Vector2(7272, 864 ); //Hall
-            //playerPos = new Vector2(8208, 1872 ); //Main
+            playerPos = new Vector2(2844, 2808); //Forest
+            //playerPos = new Vector2(1944, 4824); //Forest from Banana Forest
+            //playerPos = new Vector2(7308, 936 ); //Bedroom
+            //playerPos = new Vector2(7452, 1152); //Bedroom from Hall
+            //playerPos = new Vector2(7308, 2016 ); //Bathroom
+            //playerPos = new Vector2(8892, 864 ); //Hall from Bedroom
+            //playerPos = new Vector2(9468, 864); //Hall from Bathroom
+            //playerPos = new Vector2(9756, 900); //Hall from Main
+            //playerPos = new Vector2(8208, 1908 ); //Main from Hall
+            //playerPos = new Vector2(9252, 1908); //Main from Other world
+            //playerPos = new Vector2(7848, 4320 ); //Banana Forest
+            //playerPos = new Vector2(1728, 7956); //Strange Forest
+            //playerPos = new Vector2(10656, 1008); //Trailer 1
+            //playerPos = new Vector2(14508, 576); //Trailer 2
             cameraPos = new Vector2(playerPos.X, playerPos.Y);
             base.Initialize();
         }
@@ -119,12 +127,12 @@ namespace MapTestV2
             GraphicsDevice.RasterizerState = new RasterizerState { ScissorTestEnable = true };
 
             // TODO: Add your drawing code here
-            _tiledMapRenderer.Draw(0, transformMatrix);
-            _tiledMapRenderer.Draw(1, transformMatrix);
-            _tiledMapRenderer.Draw(2, transformMatrix);
-            _tiledMapRenderer.Draw(3, transformMatrix);
-            _tiledMapRenderer.Draw(4, transformMatrix);
-            _tiledMapRenderer.Draw(5, transformMatrix);
+            _tiledMapRenderer.Draw(0, transformMatrix); //1st floor
+            _tiledMapRenderer.Draw(1, transformMatrix); //2nd floor
+            _tiledMapRenderer.Draw(2, transformMatrix); //3rd floor
+            _tiledMapRenderer.Draw(3, transformMatrix); //TreeBody
+            _tiledMapRenderer.Draw(4, transformMatrix); //Interaction Object
+            _tiledMapRenderer.Draw(5, transformMatrix); //Object1
 
             _spriteBatch.Begin(transformMatrix: transformMatrix, samplerState: SamplerState.PointClamp, rasterizerState: RasterizerState.CullNone);
             _spriteBatch.Draw(player, new Vector2(playerPos.X - 36, playerPos.Y - 72), new Rectangle(pic * 36, 0, 36, 72), Color.White, 0, Vector2.Zero, new Vector2(2, 2), 0, 0.2f);

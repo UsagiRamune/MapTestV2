@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/LEGION/Downloads/Cs to/Shaman/2.12/ShamanTheMantraWorld/ShamanTheMantraWorld/Content/New folder/AbandonHouse 3.1 - Abandonhouse.png</SourceFile>
+  <SourceTime>2024-10-26T12:44:42.7611644+07:00</SourceTime>
+  <DestFile>C:/Users/LEGION/Documents/VS 2022/Monogame/MapTestV2/MapTestV2/Content/bin/Windows/Content/../../../../../../Downloads/Cs to/Shaman/2.12/ShamanTheMantraWorld/ShamanTheMantraWorld/Content/New folder/AbandonHouse 3.1 - Abandonhouse_0.xnb</DestFile>
+  <DestTime>2024-10-28T15:16:17.1447339+07:00</DestTime>
+  <Importer>TextureImporter</Importer>
+  <ImporterTime>2022-07-26T18:44:56+07:00</ImporterTime>
+  <Processor>TextureProcessor</Processor>
+  <ProcessorTime>2022-07-26T18:44:56+07:00</ProcessorTime>
+  <Parameters>
+    <Key>ColorKeyColor</Key>
+    <Value>0,0,0,0</Value>
+  </Parameters>
+  <Parameters>
+    <Key>ColorKeyEnabled</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
